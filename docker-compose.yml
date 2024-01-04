@@ -1,0 +1,47 @@
+version: '3'
+
+services:
+  # Django service
+  web:
+    build:
+      context: .
+      dockerfile: Django/Dockerfile
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    networks:
+      - mynetwork
+
+  # PostgreSQL service
+  db:
+    build:
+      context: .
+      dockerfile: PostgreSQL/Dockerfile
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: psql
+      POSTGRES_DB: cicd
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - mynetwork
+
+  # Nginx service
+  nginx:
+    build:
+      context: .
+      dockerfile: nginx/Dockerfile
+    ports:
+      - "80:80"
+    depends_on:
+      - web
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:
+
+volumes:
+  postgres_data:
+

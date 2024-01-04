@@ -86,11 +86,10 @@ DATABASES = {
         'NAME': 'cicd',
         'USER': 'postgres',
         'PASSWORD': 'psql',
-        'HOST': 'localhost',
+        'HOST': 'db',
         'PORT': '5432',
     }
 }
-
 
 # import sys
 # TEST_RUNNER = 'pytest_runner.test_runner.TestRunner'
