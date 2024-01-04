@@ -38,6 +38,16 @@ services:
   #     - web
   #   networks:
   #     - mynetwork
+  nginx:
+    image: nginx
+    ports:
+      - 80:80
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - web
+    networks:
+      - mynetwork
 
 networks:
   mynetwork:
