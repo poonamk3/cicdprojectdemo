@@ -28,16 +28,16 @@ services:
       - mynetwork
 
   # Nginx service
-  nginx:
-    build:
-      context: .
-      dockerfile: nginx/Dockerfile
-    ports:
-      - "80:80"
-    depends_on:
-      - web
-    networks:
-      - mynetwork
+  # nginx:
+  #   build:
+  #     context: .
+  #     dockerfile: nginx/Dockerfile
+  #   ports:
+  #     - "80:80"
+  #   depends_on:
+  #     - web
+  #   networks:
+  #     - mynetwork
 
 networks:
   mynetwork:
