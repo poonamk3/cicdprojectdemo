@@ -1,7 +1,6 @@
 version: '3'
 
 services:
-  # Django service
   web:
     build:
       context: .
@@ -12,8 +11,6 @@ services:
       - db
     networks:
       - mynetwork
-
-  # PostgreSQL service
   db:
     build:
       context: .
@@ -27,17 +24,6 @@ services:
     networks:
       - mynetwork
 
-  # Nginx service
-  # nginx:
-  #   build:
-  #     context: .
-  #     dockerfile: nginx/Dockerfile
-  #   ports:
-  #     - "80:80"
-  #   depends_on:
-  #     - web
-  #   networks:
-  #     - mynetwork
   nginx:
     image: nginx
     ports:
