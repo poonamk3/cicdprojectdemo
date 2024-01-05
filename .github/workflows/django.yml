@@ -102,10 +102,9 @@ jobs:
 
       - name: Deploy to Production
         if: github.ref == 'refs/heads/master' && github.event_name == 'push'
-        run: |
+        run: ./deploy.sh
+        echo "Deploying to production..."
 
-          # Add your deployment commands here
-          echo "Deploying to production..."
 
 
 
