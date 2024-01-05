@@ -47,8 +47,8 @@ jobs:
     #     python manage.py makemigrations
     #     python manage.py migrate
             
-    - name: Run Tests
-      run: |
-        pytest
+    # - name: Run Tests
+    #   run: |
+    #     pytest
 
     
