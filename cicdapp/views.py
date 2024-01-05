@@ -11,5 +11,6 @@ def render_example(request):
 
 
 def example(request):
-    context = {'message': 'Hello from the render example!'}
-    return render(request, 'cicd/render_examples.html', context)
+    return HttpResponse("Welcome to the CICD app!")
+    # context = {'message': 'Hello from the render example!'}
+    # return render(request, 'cicd/render_examples.html', context)
