@@ -24,7 +24,7 @@ def test_render_example_view():
 @pytest.mark.django_db
 def test_render_example_view():
     client = Client()
-    response = client.get('/examples/')
+    response = client.get('/example/')
     
     assert response.status_code == 200
     assert b'Hello from the render example!' in response.content
