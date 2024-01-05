@@ -1,5 +1,8 @@
 name: Django CI
 
+BRANCH_NAME=$(echo $GITHUB_REF | sed 's/refs\/heads\///')
+echo "Branch Name: $BRANCH_NAME"
+
 on:
   push:
     branches: [ "master" ]
