@@ -86,7 +86,8 @@ DATABASES = {
         'NAME': 'cicd',
         'USER': 'postgres',
         'PASSWORD': 'psql',
-        'HOST': 'db',
+        #'HOST': 'db',
+        'HOST': 'localhost',
         'PORT': '5432',
     }
 }
