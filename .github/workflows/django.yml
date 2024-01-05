@@ -97,12 +97,11 @@ jobs:
           # pip install -r requirements.txt
           pip install pytest
 
-      # - name: Run Tests
-      #   run: pytest
-
-      # - name: Deploy to Production
-      #   if: github.ref == 'refs/heads/master' && github.event_name == 'push'
-      #   run: ./deploy.sh
+      - name: Deploy to Production
+        if: github.ref == 'refs/heads/master' && github.event_name == 'push'
+        run: |
+          # Add your deployment commands here
+          echo "Deploying to production..."
 
 
 
