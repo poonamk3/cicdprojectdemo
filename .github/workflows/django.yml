@@ -100,9 +100,9 @@ jobs:
       # - name: Run Tests
       #   run: pytest
 
-      - name: Deploy to Production
-        if: github.ref == 'refs/heads/master' && github.event_name == 'push'
-        run: ./deploy.sh
+      # - name: Deploy to Production
+      #   if: github.ref == 'refs/heads/master' && github.event_name == 'push'
+      #   run: ./deploy.sh
 
 
 
