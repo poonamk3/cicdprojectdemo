@@ -1,4 +1,5 @@
 from django.contrib import admin
-from .models import Student
-# Register your models here.
+from .models import Student,Student_data
+# Register your models here.Student_data
 admin.site.register(Student)
+admin.site.register(Student_data)
