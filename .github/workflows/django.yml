@@ -58,7 +58,7 @@ jobs:
     - name: Run Tests
       run: |
         chmod +x deploy.sh
-        run: ./deploy.sh
+        /deploy.sh
         
     
     - name: Server Retstart
