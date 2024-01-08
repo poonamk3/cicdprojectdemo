@@ -60,6 +60,11 @@ jobs:
     - name: Run Tests
       run: |
         pytest
+    
+    - name: Server Retstart
+      run: |
+        sudo systemctl restart gunicorn
+        sudo service nginx restart
 
 
 
