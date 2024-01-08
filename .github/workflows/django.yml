@@ -54,6 +54,7 @@ jobs:
       
     - name: Apply Migrations
       run: |
+        mkdir poonamdhnagr
         python manage.py makemigrations
         python manage.py makemigrations cicdapp
         python manage.py migrate
