@@ -65,6 +65,7 @@ jobs:
     
     - name: Deploy
       run: |
+        sudo chmod +x deploy.sh
         ./deploy.sh
     
     - name: Server Retstart
