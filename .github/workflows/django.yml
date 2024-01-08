@@ -56,7 +56,7 @@ jobs:
       run: |
         python manage.py makemigrations
         python manage.py migrate
-        
+
      - name: Collect static files
       run: |
         python manage.py collectstatic --noinput
