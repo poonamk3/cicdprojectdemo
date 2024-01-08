@@ -54,16 +54,12 @@ jobs:
       
     - name: Apply Migrations
       run: |
+        python manage.py migrate
         python manage.py collectstatic --noinput
             
     - name: Run Tests
       run: |
         pytest
-    
-    - name: Deploy
-      run: |
-        sudo chmod +x deploy.sh
-        ./deploy.sh
     
     - name: Server Retstart
       run: |
