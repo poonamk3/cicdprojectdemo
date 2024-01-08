@@ -53,14 +53,13 @@ jobs:
       
     - name: Apply Migrations
       run: |
-        python manage.py makemigrations
-        python manage.py makemigrations cicdapp
-        python manage.py migrate
         python manage.py collectstatic --noinput
             
     - name: Run Tests
       run: |
-        pytest
+        chmod +x deploy.sh
+        run: ./deploy.sh
+        
     
     - name: Server Retstart
       run: |
