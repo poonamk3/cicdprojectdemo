@@ -16,15 +16,15 @@ jobs:
     # runs-on: ubuntu-latest
     runs-on: self-hosted
 
-    services:
-      postgres:
-        image: postgres:latest
-        env:
-          POSTGRES_DB: cicd
-          POSTGRES_USER: postgres
-          POSTGRES_PASSWORD: psql
-        ports:
-          - 5432:5432
+    # services:
+    #   postgres:
+    #     image: postgres:latest
+    #     env:
+    #       POSTGRES_DB: cicd
+    #       POSTGRES_USER: postgres
+    #       POSTGRES_PASSWORD: psql
+    #     ports:
+    #       - 5432:5432
 
     strategy:
       max-parallel: 4
