@@ -55,6 +55,7 @@ jobs:
     - name: Apply Migrations
       run: |
         python manage.py makemigrations
+        python manage.py makemigrations cicdapp
         python manage.py migrate
         python manage.py collectstatic --noinput
             
