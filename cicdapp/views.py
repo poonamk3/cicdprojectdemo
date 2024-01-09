@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def cicd_home(request):
-    return HttpResponse("Welcome to the CICD app! 000000000000")
+    return HttpResponse("Welcome to the CICD app! 0000000000009999")
 
 def render_example(request):
     context = {'message': 'Hello from the render example!'}
